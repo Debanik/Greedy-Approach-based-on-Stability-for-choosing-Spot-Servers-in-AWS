@@ -9,11 +9,11 @@ for i in machine_types:
     #print(temp_prices)
     try:
         a = [float(i['SpotPrice']) for i in temp_prices['SpotPriceHistory']]
-        #plt.plot(a)
-        #plt.xlabel('Over time')
-        #plt.ylabel('Price')
-        #plt.title('Price Fluctuations for '+i)
-        #plt.show()
+        plt.plot(a)
+        plt.xlabel('Over time')
+        plt.ylabel('Price')
+        plt.title('Price Fluctuations for '+i)
+        plt.show()
         print(a)
         stand_dev.append(float(numpy.std(a)))
     except:
